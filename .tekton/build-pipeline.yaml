@@ -357,6 +357,8 @@ spec:
           value: $(tasks.build-container-amd64.results.IMAGE_DIGEST)
         - name: image-url
           value: $(tasks.build-container-amd64.results.IMAGE_URL)
+        - name: PLATFORM
+          value: linux/amd64
       runAfter:
         - build-container-amd64
       taskRef:
