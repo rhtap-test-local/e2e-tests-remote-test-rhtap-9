@@ -123,9 +123,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
     - name: clone-repository-amd64
       params:
         - name: url
@@ -143,9 +140,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
       when:
         - input: $(tasks.init.results.build)
           operator: in
@@ -171,9 +165,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
       when:
         - input: $(params.prefetch-input)
           operator: notin
@@ -218,9 +209,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
       when:
         - input: $(tasks.init.results.build)
           operator: in
@@ -249,9 +237,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
       when:
         - input: $(tasks.init.results.build)
           operator: in
@@ -272,9 +257,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
       when:
         - input: $(tasks.init.results.build)
           operator: in
@@ -304,9 +286,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
       when:
         - input: $(params.skip-checks)
           operator: in
@@ -329,9 +308,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
       when:
         - input: $(params.skip-checks)
           operator: in
@@ -352,9 +328,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
       when:
         - input: $(params.skip-checks)
           operator: in
@@ -372,9 +345,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
       when:
         - input: $(params.skip-checks)
           operator: in
@@ -404,9 +374,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
       when:
         - input: $(params.skip-checks)
           operator: in
@@ -429,9 +396,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
       when:
         - input: $(params.skip-checks)
           operator: in
@@ -452,9 +416,6 @@ spec:
           - name: kind
             value: task
         resolver: bundles
-      podTemplate:
-        nodeSelector:
-          node.kubernetes.io/instance-type: m5d.4xlarge
   workspaces:
     - name: workspace-amd64
     - name: git-auth
