@@ -29,6 +29,10 @@ spec:
     value: '{{revision}}'
   pipelineRef:
     name: build-pipeline
+  taskRunTemplate:
+    podTemplate:
+      nodeSelector:
+        node.kubernetes.io/instance-type: m5d.4xlarge
   workspaces:
     - name: workspace-amd64
       volumeClaimTemplate:
