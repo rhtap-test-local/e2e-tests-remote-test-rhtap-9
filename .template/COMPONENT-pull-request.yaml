@@ -34,7 +34,7 @@ spec:
   taskRunTemplate:
     podTemplate:
       nodeSelector:
-        node.kubernetes.io/instance-type: m5d.4xlarge
+        node-role.kubernetes.io/konflux-tenants: ''
   workspaces:
     - name: workspace-amd64
       volumeClaimTemplate:
