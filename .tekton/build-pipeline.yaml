@@ -203,7 +203,7 @@ spec:
             value: buildah
             ###value: buildah-remote
           - name: bundle
-            value: quay.io/redhat-appstudio-tekton-catalog/task-buildah:0.2@sha256:20ab3dabcf7b136ea576d2e90ec115346b71073758caf943a8be99424c436c8b
+            value: quay.io/redhat-appstudio-tekton-catalog/task-buildah:0.2@sha256:2b05d0463033cfab93dfa35691afb66ff09f2be39e96b856adee70baa970fab5
             ###value: quay.io/redhat-appstudio-tekton-catalog/task-buildah-remote:0.2@sha256:cd3e0e24c45cbb23d24bc507b1b68dee4ce9f83c7f9a754f7828193f7599bd82
             ###value: quay.io/rhcloudperfscale/jhutar-tekton-bundle-buildah:buildah-3
           - name: kind
@@ -304,7 +304,7 @@ spec:
           - name: name
             value: clair-scan
           - name: bundle
-            value: quay.io/redhat-appstudio-tekton-catalog/task-clair-scan:0.1@sha256:3d9d05162d5807cde4431e80f0f126f4c19994c0c1633629a62ece9a43b966cd
+            value: quay.io/redhat-appstudio-tekton-catalog/task-clair-scan:0.1@sha256:fb1aa363b56f9e9bdb1b30a46ddace9035add63fdfb5e39d01b27ae84cc7e425
           - name: kind
             value: task
         resolver: bundles
@@ -324,7 +324,7 @@ spec:
           - name: name
             value: ecosystem-cert-preflight-checks
           - name: bundle
-            value: quay.io/redhat-appstudio-tekton-catalog/task-ecosystem-cert-preflight-checks:0.1@sha256:598d9153b1372fc32ccac74020c18a37fa0d66e28099b622f1a4b39905912964
+            value: quay.io/redhat-appstudio-tekton-catalog/task-ecosystem-cert-preflight-checks:0.1@sha256:03266cc67cf4ac6c8d963a2cc7eb1e9ff024d3c861f57353ee0125ed83943807
           - name: kind
             value: task
         resolver: bundles
@@ -369,7 +369,7 @@ spec:
             value: clamav-scan
             ###value: clamav-scan-remote
           - name: bundle
-            value: quay.io/redhat-appstudio-tekton-catalog/task-clamav-scan:0.1@sha256:559d281b58584386a6faaf0e6641c814f9d877432d1a13bd03076745fffffaf1
+            value: quay.io/redhat-appstudio-tekton-catalog/task-clamav-scan:0.1@sha256:cda1e319c81a32356d900b2f78483e072fac29684ad81c73aa2314a7f3a389e0
             ###value: quay.io/rhcloudperfscale/jhutar-tekton-bundle-buildah:clamav-2
           - name: kind
             value: task
