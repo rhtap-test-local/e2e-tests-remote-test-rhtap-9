@@ -8,7 +8,7 @@ USER root
 ARG OC_VERSION=4.14.8
 
 # renovate: datasource=github-releases depName=stedolan/jq
-ARG JQ_VERSION=1.6
+ARG JQ_VERSION=1.7.1
 
 # renovate: datasource=github-releases depName=mikefarah/yq
 ARG YQ_VERSION=4.43.1
@@ -29,17 +29,17 @@ COPY tests/ tests/
 RUN go install -mod=mod github.com/onsi/ginkgo/v2/ginkgo
 RUN ginkgo build ./cmd
 
-RUN curl -L "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OC_VERSION}/openshift-client-linux.tar.gz" -o /tmp/openshift-client-linux.tar.gz && \
+RUN curl -L "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OC_VERSION}/openshift-client-linux-arm64.tar.gz" -o /tmp/openshift-client-linux.tar.gz && \
     tar --no-same-owner -xzf /tmp/openshift-client-linux.tar.gz && \
     mv oc kubectl /usr/local/bin && \
     oc version --client && \
     kubectl version --client
 
-RUN curl -L "https://github.com/stedolan/jq/releases/download/jq-${JQ_VERSION}/jq-linux64" -o /usr/local/bin/jq  && \
+RUN curl -L "https://github.com/jqlang/jq/releases/download/jq-${JQ_VERSION}/jq-linux-arm64" -o /usr/local/bin/jq  && \
     chmod +x /usr/local/bin/jq && \
     jq --version
 
-RUN curl -L "https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq && \
+RUN curl -L "https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_arm64" -o /usr/local/bin/yq && \
     chmod +x /usr/local/bin/yq && \
     yq --version
 
