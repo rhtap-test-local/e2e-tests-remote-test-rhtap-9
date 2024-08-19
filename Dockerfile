@@ -43,7 +43,7 @@ RUN curl -L "https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq
     chmod +x /usr/local/bin/yq && \
     yq --version
 
-RUN curl -LO "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_amd64.tar.gz" && \
+RUN curl -LO "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_arm64.tar.gz" && \
     mkdir -p oras-install/ && \
     tar -zxf oras_${ORAS_VERSION}_*.tar.gz -C oras-install/ && \
     mv oras-install/oras /usr/local/bin/ && \
