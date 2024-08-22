@@ -193,19 +193,14 @@ spec:
           value: $(tasks.clone-repository-amd64.results.commit)
         - name: BUILD_ARGS_FILE
           value: $(params.build-args-file)
-        ###- name: PLATFORM
-        ###  value: linux/amd64
       runAfter:
         - prefetch-dependencies-amd64
       taskRef:
         params:
           - name: name
             value: buildah
-            ###value: buildah-remote
           - name: bundle
             value: quay.io/redhat-appstudio-tekton-catalog/task-buildah:0.2@sha256:2b05d0463033cfab93dfa35691afb66ff09f2be39e96b856adee70baa970fab5
-            ###value: quay.io/redhat-appstudio-tekton-catalog/task-buildah-remote:0.2@sha256:cd3e0e24c45cbb23d24bc507b1b68dee4ce9f83c7f9a754f7828193f7599bd82
-            ###value: quay.io/rhcloudperfscale/jhutar-tekton-bundle-buildah:buildah-3
           - name: kind
             value: task
         resolver: bundles
@@ -359,18 +354,14 @@ spec:
           value: $(tasks.build-container-amd64.results.IMAGE_DIGEST)
         - name: image-url
           value: $(tasks.build-container-amd64.results.IMAGE_URL)
-        ###- name: PLATFORM
-        ###  value: linux/amd64
       runAfter:
         - build-container-amd64
       taskRef:
         params:
           - name: name
             value: clamav-scan
-            ###value: clamav-scan-remote
           - name: bundle
             value: quay.io/redhat-appstudio-tekton-catalog/task-clamav-scan:0.1@sha256:cda1e319c81a32356d900b2f78483e072fac29684ad81c73aa2314a7f3a389e0
-            ###value: quay.io/rhcloudperfscale/jhutar-tekton-bundle-buildah:clamav-2
           - name: kind
             value: task
         resolver: bundles
