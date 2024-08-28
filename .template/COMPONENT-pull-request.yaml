@@ -31,11 +31,7 @@ spec:
     value: '{{revision}}'
   pipelineRef:
     name: build-pipeline
-  taskRunTemplate:
-    podTemplate:
-      nodeSelector:
-        node-role.kubernetes.io/konflux-tenants: ''
-        ###node.kubernetes.io/instance-type: "r5a.4xlarge"
+  taskRunTemplate: {}
   workspaces:
     - name: workspace-amd64
       volumeClaimTemplate:
