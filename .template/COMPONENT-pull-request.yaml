@@ -34,7 +34,7 @@ spec:
   taskRunTemplate:
     podTemplate:
       nodeSelector:
-        storage-type: ebs
+        node-role.kubernetes.io/konflux-tenants: ""
   workspaces:
     - name: workspace-amd64
       volumeClaimTemplate:
